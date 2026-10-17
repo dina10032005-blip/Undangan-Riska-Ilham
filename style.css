@@ -940,3 +940,162 @@ section {
         padding: 20px 16px;
     }
 }
+
+/* ==========================================
+   BACKGROUND SETIAP HALAMAN UNDANGAN
+   Tema: Cream, Sage, Gold, Floral
+========================================== */
+
+/* Pengaturan dasar semua halaman */
+.opening,
+.photo-section,
+.wedding,
+.greeting,
+.couple,
+.event,
+.gallery,
+.gift-card,
+.closing,
+.wishes {
+    position: relative;
+    background-color: #f7f0e6;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    isolation: isolate;
+}
+
+/* Background halaman pembuka */
+.opening {
+    background-image: url("assets/bg-cover.jpg");
+}
+
+/* Background foto setelah undangan dibuka */
+.photo-section {
+    background-image: url("assets/bg-cover.jpg");
+}
+
+/* Background nama pengantin dan countdown */
+.wedding {
+    background-image: url("assets/bg-wedding.jpg");
+}
+
+/* Background salam */
+.greeting {
+    background-image: url("assets/bg-greeting.jpg");
+}
+
+/* Background profil kedua mempelai */
+.couple {
+    background-image: url("assets/bg-couple.jpg");
+}
+
+/* Background detail akad dan resepsi */
+.event {
+    background-image: url("assets/bg-event.jpg");
+}
+
+/* Background galeri */
+.gallery {
+    background-image: url("assets/bg-gallery.jpg");
+}
+
+/* Background amplop digital */
+.gift-card {
+    background-image: url("assets/bg-gift.jpg");
+}
+
+/* Background halaman penutup */
+.closing {
+    background-image: url("assets/bg-closing.jpg");
+}
+
+/* Background doa dan ucapan */
+.wishes {
+    background-image: url("assets/bg-greeting.jpg");
+}
+
+/* Menjaga teks tetap mudah dibaca */
+.wedding,
+.greeting,
+.couple,
+.event,
+.gallery,
+.gift-card,
+.closing,
+.wishes {
+    background-blend-mode: normal;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .opening,
+    .photo-section,
+    .wedding,
+    .greeting,
+    .couple,
+    .event,
+    .gallery,
+    .gift-card,
+    .closing,
+    .wishes {
+        background-position: center center;
+        background-size: cover;
+    }
+}
+/* =================================
+   BACKGROUND RESPONSIVE LAPTOP & HP
+================================= */
+
+/* Laptop */
+.wedding {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* HP: tampilkan hiasan di bagian tepi */
+@media screen and (max-width: 600px) {
+    .wedding {
+        background-size: 100% 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    /* Bunga sudut kiri atas */
+    .wedding .floral-top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 115px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Bunga sudut kanan atas */
+    .wedding .floral-top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 115px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Bunga sudut kanan bawah */
+    .wedding .floral-bottom-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 120px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Pastikan isi halaman tetap di atas background */
+    .wedding .container {
+        position: relative;
+        z-index: 2;
+    }
+}
